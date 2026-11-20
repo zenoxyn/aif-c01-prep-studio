@@ -5,6 +5,7 @@
     <a href="#features">Features</a> •
     <a href="#tech-stack">Tech Stack</a> •
     <a href="#getting-started">Getting Started</a> •
+    <a href="#deploying-to-vercel">Deploy</a> •
     <a href="#project-structure">Project Structure</a>
   </p>
 </div>
@@ -76,6 +77,34 @@ npm run preview    # Preview production build locally
 npm run lint       # Type-check with TypeScript
 npm run clean      # Remove build artifacts
 ```
+
+---
+
+## ☁️ Deploying to Vercel
+
+This app is a fully static SPA — no server, database, or API keys required. Every push to `main` redeploys automatically once the GitHub repo is connected.
+
+### One-time setup
+
+1. Push this repo to GitHub.
+2. Go to [vercel.com/new](https://vercel.com/new) → **Import Git Repository** → select the repo.
+3. Vercel reads [`vercel.json`](./vercel.json), so the defaults are already correct:
+   - **Framework preset**: Vite
+   - **Build command**: `npm run build`
+   - **Output directory**: `dist`
+4. Click **Deploy**. No environment variables are needed.
+
+### What `vercel.json` does
+
+| Setting             | Purpose                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------- |
+| `rewrites`          | Sends any unknown path to `index.html` so client-side navigation never 404s.                |
+| `headers`           | Caches `dist/assets/*` for 1 year (`immutable`) — safe because filenames are content-hashed. |
+
+### Notes
+
+- **Hobby plan is for personal / non-commercial use only** ([Vercel ToS §4](https://vercel.com/legal/terms)). Free tier includes 100 GB fast data transfer and 1M CDN requests per month.
+- `.vercel/` (CLI local state) and `dist/` are gitignored — never commit build output.
 
 ---
 
