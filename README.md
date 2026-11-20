@@ -5,7 +5,7 @@
     <a href="#features">Features</a> •
     <a href="#tech-stack">Tech Stack</a> •
     <a href="#getting-started">Getting Started</a> •
-    <a href="#deploying-to-vercel">Deploy</a> •
+    <a href="https://aif-c01-exam-preparation.vercel.app/">Demo APP</a> •
     <a href="#project-structure">Project Structure</a>
   </p>
 </div>
