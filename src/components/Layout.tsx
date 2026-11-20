@@ -14,6 +14,7 @@ import {
   Menu,
   X,
   Cloud,
+  Github,
 } from 'lucide-react';
 import { AppView } from '../types';
 
@@ -122,8 +123,31 @@ export const Layout: React.FC<LayoutProps> = ({
           })}
         </nav>
 
-        <div className="p-4 border-t border-slate-200 dark:border-slate-800 text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-          Independent AIF-C01 study platform. Not affiliated with AWS or official AWS exam banks.
+        <div className="p-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
+          <a
+            href="https://github.com/zenoxyn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 group"
+          >
+            <img
+              src="https://avatars.githubusercontent.com/u/168281492?v=4"
+              alt="Novanda Ega Arenta"
+              loading="lazy"
+              className="w-7 h-7 rounded-full ring-1 ring-slate-200 dark:ring-slate-700"
+            />
+            <div className="min-w-0">
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
+                Built by
+              </div>
+              <div className="text-xs font-medium text-slate-800 dark:text-slate-200 truncate group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                @zenoxyn
+              </div>
+            </div>
+          </a>
+          <p className="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+            Independent AIF-C01 study platform. Not affiliated with AWS or official AWS exam banks.
+          </p>
         </div>
       </aside>
 
@@ -217,8 +241,31 @@ export const Layout: React.FC<LayoutProps> = ({
                 );
               })}
             </nav>
-            <div className="p-4 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
-              Independent study prep tool. Not affiliated with AWS.
+            <div className="p-4 border-t border-slate-200 dark:border-slate-800 space-y-3">
+              <a
+                href="https://github.com/zenoxyn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5"
+              >
+                <img
+                  src="https://avatars.githubusercontent.com/u/168281492?v=4"
+                  alt="Novanda Ega Arenta"
+                  loading="lazy"
+                  className="w-7 h-7 rounded-full ring-1 ring-slate-200 dark:ring-slate-700"
+                />
+                <div className="min-w-0">
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">
+                    Built by
+                  </div>
+                  <div className="text-xs font-medium text-slate-800 dark:text-slate-200 truncate">
+                    @zenoxyn
+                  </div>
+                </div>
+              </a>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                Independent study prep tool. Not affiliated with AWS.
+              </p>
             </div>
           </div>
         </div>
@@ -278,6 +325,21 @@ export const Layout: React.FC<LayoutProps> = ({
         >
           {children}
         </main>
+
+        {distractionFree ? null : (
+          <footer className="lg:hidden px-4 py-6 border-t border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+            <span>Built by</span>
+            <a
+              href="https://github.com/zenoxyn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+              @zenoxyn
+            </a>
+          </footer>
+        )}
       </div>
     </div>
   );

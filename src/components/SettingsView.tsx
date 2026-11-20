@@ -9,6 +9,9 @@ import {
   CheckCircle2,
   AlertTriangle,
   Info,
+  Github,
+  Heart,
+  ExternalLink,
 } from 'lucide-react';
 import { DomainId, UserProgressState } from '../types';
 import { OFFICIAL_DOMAINS, OFFICIAL_EXAM_BLUEPRINT } from '../data/examBlueprint';
@@ -341,6 +344,46 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Credits */}
+      <section className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 space-y-4">
+        <div>
+          <h2 className="text-base font-semibold text-slate-900 dark:text-white">
+            About &amp; Credits
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+            Built and maintained by{' '}
+            <span className="font-medium text-slate-800 dark:text-slate-200">
+              Novanda Ega Arenta
+            </span>
+            . Source code is open on GitHub.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://github.com/zenoxyn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <Github className="w-4 h-4" />
+            <span>@zenoxyn</span>
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+          </a>
+
+          <a
+            href="https://github.com/zenoxyn/aif-c01-prep-studio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          >
+            <Heart className="w-4 h-4 text-rose-500" />
+            <span>Star this project</span>
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+          </a>
         </div>
       </section>
 

@@ -6,8 +6,11 @@
     <a href="#tech-stack">Tech Stack</a> •
     <a href="#getting-started">Getting Started</a> •
     <a href="https://aif-c01-exam-preparation.vercel.app/">Demo APP</a> •
-    <a href="#project-structure">Project Structure</a>
+    <a href="#deploying-to-vercel">Deploy</a> •
+    <a href="#project-structure">Project Structure</a> •
+    <a href="#author">Author</a>
   </p>
+  <p>Built by <a href="https://github.com/zenoxyn"><strong>@zenoxyn</strong></a></p>
 </div>
 
 ---
@@ -150,6 +153,15 @@ src/
 ## 📝 License
 
 MIT — Free to use, modify, and share for your own exam prep.
+
+---
+
+## 👤 Author
+
+**Novanda Ega Arenta** ([@zenoxyn](https://github.com/zenoxyn))
+
+- GitHub: [github.com/zenoxyn](https://github.com/zenoxyn)
+- Project repo: [github.com/zenoxyn/aif-c01-prep-studio](https://github.com/zenoxyn/aif-c01-prep-studio)
 
 ---
 
